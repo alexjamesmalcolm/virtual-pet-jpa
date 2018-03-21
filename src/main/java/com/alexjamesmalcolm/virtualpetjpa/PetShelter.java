@@ -1,15 +1,30 @@
 package com.alexjamesmalcolm.virtualpetjpa;
 
+import java.util.ArrayList;
+import java.util.Collection;
+
 public class PetShelter {
 
-	private Pet pet;
+	private Collection<Pet> pets = new ArrayList<>();
 
 	public void walk() {
-		((Walkable) pet).walk();
+		pets.forEach(pet -> {
+			if (Walkable.class.isAssignableFrom(pet.getClass()))
+				((Walkable) pet).walk();
+		});
 	}
 
 	public void add(Pet pet) {
-		this.pet = pet;
+		pets.add(pet);
+	}
+
+	public void oilRobots() {
+		pets.forEach(pet -> {
+			if (Robotic.class.isAssignableFrom(pet.getClass())) {
+				Robotic robot = (Robotic) pet;
+				robot.oil();
+			}
+		});
 	}
 
 }
