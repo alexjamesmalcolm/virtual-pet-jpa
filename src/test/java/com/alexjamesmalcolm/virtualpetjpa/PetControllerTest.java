@@ -1,5 +1,12 @@
 package com.alexjamesmalcolm.virtualpetjpa;
 
+import static org.hamcrest.Matchers.any;
+import static org.hamcrest.Matchers.contains;
+import static org.junit.Assert.assertThat;
+import static org.mockito.Mockito.when;
+
+import java.util.Collections;
+
 import org.junit.Before;
 import org.junit.Test;
 import org.mockito.InjectMocks;
@@ -25,6 +32,10 @@ public class PetControllerTest {
 	
 	@Test
 	public void shouldGetPets() {
+		when(petRepo.findAll()).thenReturn(Collections.singleton(pet));
 		
+		Iterable<Pet> result = underTest.getPets();
+		
+		assertThat(result, contains(any(Pet.class)));
 	}
 }
