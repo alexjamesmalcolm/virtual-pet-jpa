@@ -19,11 +19,15 @@ public class PetShelterTest {
 	@Mock
 	private Robotic robot;
 	
+	@Mock
+	private Organic organic;
+	
 	@Before
 	public void setup() {
 		MockitoAnnotations.initMocks(this);
 		underTest.add(walkable);
 		underTest.add(robot);
+		underTest.add(organic);
 	}
 	
 	@Test
@@ -36,5 +40,11 @@ public class PetShelterTest {
 	public void shouldOilRobots() {
 		underTest.oilRobots();
 		verify(robot).oil();
+	}
+	
+	@Test
+	public void shouldFeedOrganics() {
+		underTest.feed();
+		verify(organic).feed();
 	}
 }

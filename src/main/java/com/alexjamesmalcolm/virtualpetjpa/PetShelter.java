@@ -27,4 +27,11 @@ public class PetShelter {
 		});
 	}
 
+	public void feed() {
+		pets.forEach(pet -> {
+			if (Organic.class.isAssignableFrom(pet.getClass()))
+				((Organic) pet).feed();
+		});
+	}
+
 }
