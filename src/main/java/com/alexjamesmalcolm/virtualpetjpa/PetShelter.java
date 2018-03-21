@@ -34,4 +34,11 @@ public class PetShelter {
 		});
 	}
 
+	public void water() {
+		pets.forEach(pet -> {
+			if (Organic.class.isAssignableFrom(pet.getClass()))
+				((Organic) pet).water();
+		});
+	}
+
 }

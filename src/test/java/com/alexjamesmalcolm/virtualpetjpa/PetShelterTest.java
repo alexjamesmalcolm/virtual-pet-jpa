@@ -47,4 +47,10 @@ public class PetShelterTest {
 		underTest.feed();
 		verify(organic).feed();
 	}
+	
+	@Test
+	public void shouldWaterOrganics() {
+		underTest.water();
+		verify(organic).water();
+	}
 }
