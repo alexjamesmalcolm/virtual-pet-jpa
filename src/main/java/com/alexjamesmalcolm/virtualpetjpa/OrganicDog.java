@@ -1,7 +1,14 @@
 package com.alexjamesmalcolm.virtualpetjpa;
 
+import static javax.persistence.CascadeType.ALL;
+
+import javax.persistence.Entity;
+import javax.persistence.OneToOne;
+
+@Entity
 public class OrganicDog extends Organic implements Walkable {
 
+	@OneToOne(cascade = ALL)
 	private Cage cage;
 
 	public int getDirtyness() {
