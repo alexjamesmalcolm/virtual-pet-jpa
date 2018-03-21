@@ -38,4 +38,13 @@ public class PetControllerTest {
 		
 		assertThat(result, contains(any(Pet.class)));
 	}
+	
+	@Test
+	public void shouldGetPetsFromDb() {
+		when(petRepo.findAll()).thenReturn(Collections.singleton(pet));
+		
+		Iterable<Pet> result = underTest.getPets();
+		
+		assertThat(result, contains(pet));
+	}
 }

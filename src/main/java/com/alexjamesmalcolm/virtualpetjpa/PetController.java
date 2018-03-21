@@ -1,12 +1,13 @@
 package com.alexjamesmalcolm.virtualpetjpa;
 
-import java.util.Collections;
+import org.springframework.data.repository.CrudRepository;
 
 public class PetController {
+	
+	private CrudRepository<Pet, Long> petRepo;
 
 	public Iterable<Pet> getPets() {
-		Pet pet = new OrganicDog("","");
-		return Collections.singleton(pet);
+		return petRepo.findAll();
 	}
 
 }
