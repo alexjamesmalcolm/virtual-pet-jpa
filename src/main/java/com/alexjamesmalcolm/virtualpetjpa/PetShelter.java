@@ -57,4 +57,8 @@ public class PetShelter {
 		return pets;
 	}
 
+	public void play(String name) {
+		findByName(name).play();
+	}
+
 }

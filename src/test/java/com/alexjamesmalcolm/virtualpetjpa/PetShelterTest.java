@@ -64,4 +64,12 @@ public class PetShelterTest {
 		Pet pet = underTest.findByName(name);
 		assertThat(pet, is(walkable));
 	}
+	
+	@Test
+	public void shouldPlayWithPet() {
+		String name = "Joey";
+		when(walkable.getName()).thenReturn(name);
+		underTest.play(name);
+		verify(walkable).play();
+	}
 }
