@@ -1,6 +1,9 @@
 package com.alexjamesmalcolm.virtualpetjpa;
 
+import static org.hamcrest.Matchers.is;
+import static org.junit.Assert.assertThat;
 import static org.mockito.Mockito.verify;
+import static org.mockito.Mockito.when;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -52,5 +55,13 @@ public class PetShelterTest {
 	public void shouldWaterOrganics() {
 		underTest.water();
 		verify(organic).water();
+	}
+	
+	@Test
+	public void shouldFindByName() {
+		String name = "Joey";
+		when(walkable.getName()).thenReturn(name);
+		Pet pet = underTest.findByName(name);
+		assertThat(pet, is(walkable));
 	}
 }
