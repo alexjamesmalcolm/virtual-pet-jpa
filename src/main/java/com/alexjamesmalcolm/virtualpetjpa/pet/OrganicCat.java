@@ -1,4 +1,6 @@
-package com.alexjamesmalcolm.virtualpetjpa;
+package com.alexjamesmalcolm.virtualpetjpa.pet;
+
+import com.alexjamesmalcolm.virtualpetjpa.LitterBox;
 
 public class OrganicCat extends Organic {
 

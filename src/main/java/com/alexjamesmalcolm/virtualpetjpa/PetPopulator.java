@@ -7,6 +7,8 @@ import org.slf4j.LoggerFactory;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 
+import com.alexjamesmalcolm.virtualpetjpa.pet.OrganicDog;
+
 @Component
 public class PetPopulator implements CommandLineRunner {
 	

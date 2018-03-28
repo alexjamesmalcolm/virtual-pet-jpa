@@ -1,9 +1,11 @@
-package com.alexjamesmalcolm.virtualpetjpa;
+package com.alexjamesmalcolm.virtualpetjpa.pet;
 
 import static org.hamcrest.Matchers.is;
 import static org.junit.Assert.assertThat;
 
 import org.junit.Test;
+
+import com.alexjamesmalcolm.virtualpetjpa.pet.RoboticCat;
 
 public class RoboticCatTest {
 

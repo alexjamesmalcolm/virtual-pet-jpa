@@ -1,4 +1,4 @@
-package com.alexjamesmalcolm.virtualpetjpa;
+package com.alexjamesmalcolm.virtualpetjpa.pet;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;

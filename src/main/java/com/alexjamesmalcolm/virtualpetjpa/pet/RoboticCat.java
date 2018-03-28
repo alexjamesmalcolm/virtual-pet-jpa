@@ -1,4 +1,4 @@
-package com.alexjamesmalcolm.virtualpetjpa;
+package com.alexjamesmalcolm.virtualpetjpa.pet;
 
 public class RoboticCat extends Robotic {
 

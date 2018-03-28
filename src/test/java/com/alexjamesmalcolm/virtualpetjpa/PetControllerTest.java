@@ -14,6 +14,8 @@ import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
 import org.springframework.data.repository.CrudRepository;
 
+import com.alexjamesmalcolm.virtualpetjpa.pet.Pet;
+
 public class PetControllerTest {
 	
 	@InjectMocks

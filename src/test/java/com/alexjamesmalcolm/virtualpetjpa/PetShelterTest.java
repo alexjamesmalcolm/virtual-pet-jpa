@@ -11,6 +11,11 @@ import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
 
+import com.alexjamesmalcolm.virtualpetjpa.pet.Organic;
+import com.alexjamesmalcolm.virtualpetjpa.pet.Pet;
+import com.alexjamesmalcolm.virtualpetjpa.pet.Robotic;
+import com.alexjamesmalcolm.virtualpetjpa.pet.Walkable;
+
 public class PetShelterTest {
 	
 	@InjectMocks

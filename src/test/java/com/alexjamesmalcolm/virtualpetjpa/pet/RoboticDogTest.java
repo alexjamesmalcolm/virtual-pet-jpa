@@ -1,9 +1,9 @@
-package com.alexjamesmalcolm.virtualpetjpa;
+package com.alexjamesmalcolm.virtualpetjpa.pet;
 
-import static com.alexjamesmalcolm.virtualpetjpa.Pet.DEFAULT_BOREDOM;
-import static com.alexjamesmalcolm.virtualpetjpa.Pet.DEFAULT_HEALTH;
-import static com.alexjamesmalcolm.virtualpetjpa.Robotic.DEFAULT_DRYNESS;
-import static com.alexjamesmalcolm.virtualpetjpa.Robotic.DRYNESS_PER_TICK;
+import static com.alexjamesmalcolm.virtualpetjpa.pet.Pet.DEFAULT_BOREDOM;
+import static com.alexjamesmalcolm.virtualpetjpa.pet.Pet.DEFAULT_HEALTH;
+import static com.alexjamesmalcolm.virtualpetjpa.pet.Robotic.DEFAULT_DRYNESS;
+import static com.alexjamesmalcolm.virtualpetjpa.pet.Robotic.DRYNESS_PER_TICK;
 import static org.hamcrest.Matchers.is;
 import static org.junit.Assert.assertThat;
 

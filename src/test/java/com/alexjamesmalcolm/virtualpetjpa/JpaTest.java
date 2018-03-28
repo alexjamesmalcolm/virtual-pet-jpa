@@ -8,6 +8,8 @@ import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.test.context.junit4.SpringRunner;
 
+import com.alexjamesmalcolm.virtualpetjpa.pet.Pet;
+
 @RunWith(SpringRunner.class)
 @DataJpaTest
 public class JpaTest {

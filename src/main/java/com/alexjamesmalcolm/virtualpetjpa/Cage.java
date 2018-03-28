@@ -5,6 +5,8 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.OneToOne;
 
+import com.alexjamesmalcolm.virtualpetjpa.pet.Pet;
+
 @Entity
 public class Cage extends Box {
 	

@@ -1,4 +1,4 @@
-package com.alexjamesmalcolm.virtualpetjpa;
+package com.alexjamesmalcolm.virtualpetjpa.pet;
 
 import static com.alexjamesmalcolm.virtualpetjpa.Box.DEFAULT_DIRTYNESS;
 import static org.hamcrest.Matchers.is;
@@ -6,6 +6,9 @@ import static org.junit.Assert.assertThat;
 
 import org.junit.Before;
 import org.junit.Test;
+
+import com.alexjamesmalcolm.virtualpetjpa.LitterBox;
+import com.alexjamesmalcolm.virtualpetjpa.pet.OrganicCat;
 
 public class OrganicCatTest {
 

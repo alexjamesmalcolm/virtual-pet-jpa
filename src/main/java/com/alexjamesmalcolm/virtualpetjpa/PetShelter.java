@@ -4,6 +4,11 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 
+import com.alexjamesmalcolm.virtualpetjpa.pet.Organic;
+import com.alexjamesmalcolm.virtualpetjpa.pet.Pet;
+import com.alexjamesmalcolm.virtualpetjpa.pet.Robotic;
+import com.alexjamesmalcolm.virtualpetjpa.pet.Walkable;
+
 public class PetShelter {
 
 	private Collection<Pet> pets = new ArrayList<>();

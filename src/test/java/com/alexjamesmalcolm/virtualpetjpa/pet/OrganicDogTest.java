@@ -1,20 +1,23 @@
-package com.alexjamesmalcolm.virtualpetjpa;
+package com.alexjamesmalcolm.virtualpetjpa.pet;
 
 import static com.alexjamesmalcolm.virtualpetjpa.Box.DEFAULT_DIRTYNESS;
-import static com.alexjamesmalcolm.virtualpetjpa.Organic.DEFAULT_HUNGER;
-import static com.alexjamesmalcolm.virtualpetjpa.Organic.HUNGER_PER_TICK;
-import static com.alexjamesmalcolm.virtualpetjpa.Organic.HUNGER_TO_THIRST;
-import static com.alexjamesmalcolm.virtualpetjpa.Organic.HUNGER_TO_WASTE;
-import static com.alexjamesmalcolm.virtualpetjpa.Organic.THIRST_PER_TICK;
-import static com.alexjamesmalcolm.virtualpetjpa.Organic.THIRST_TO_WASTE;
-import static com.alexjamesmalcolm.virtualpetjpa.Organic.WASTE_TO_DIRTYNESS;
-import static com.alexjamesmalcolm.virtualpetjpa.Pet.BOREDOM_PER_TICK;
-import static com.alexjamesmalcolm.virtualpetjpa.Pet.DEFAULT_HEALTH;
+import static com.alexjamesmalcolm.virtualpetjpa.pet.Organic.DEFAULT_HUNGER;
+import static com.alexjamesmalcolm.virtualpetjpa.pet.Organic.HUNGER_PER_TICK;
+import static com.alexjamesmalcolm.virtualpetjpa.pet.Organic.HUNGER_TO_THIRST;
+import static com.alexjamesmalcolm.virtualpetjpa.pet.Organic.HUNGER_TO_WASTE;
+import static com.alexjamesmalcolm.virtualpetjpa.pet.Organic.THIRST_PER_TICK;
+import static com.alexjamesmalcolm.virtualpetjpa.pet.Organic.THIRST_TO_WASTE;
+import static com.alexjamesmalcolm.virtualpetjpa.pet.Organic.WASTE_TO_DIRTYNESS;
+import static com.alexjamesmalcolm.virtualpetjpa.pet.Pet.BOREDOM_PER_TICK;
+import static com.alexjamesmalcolm.virtualpetjpa.pet.Pet.DEFAULT_HEALTH;
 import static org.hamcrest.Matchers.is;
 import static org.junit.Assert.assertThat;
 
 import org.junit.Before;
 import org.junit.Test;
+
+import com.alexjamesmalcolm.virtualpetjpa.Box;
+import com.alexjamesmalcolm.virtualpetjpa.Cage;
 
 public class OrganicDogTest {
 
