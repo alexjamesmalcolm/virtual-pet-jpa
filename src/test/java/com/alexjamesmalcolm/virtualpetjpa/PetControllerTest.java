@@ -3,16 +3,18 @@ package com.alexjamesmalcolm.virtualpetjpa;
 import static org.hamcrest.Matchers.any;
 import static org.hamcrest.Matchers.contains;
 import static org.junit.Assert.assertThat;
+import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 
 import java.util.Collections;
+import java.util.Set;
 
 import org.junit.Before;
 import org.junit.Test;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
-import org.springframework.data.repository.CrudRepository;
+import org.springframework.ui.Model;
 
 import com.alexjamesmalcolm.virtualpetjpa.pet.Pet;
 
@@ -22,10 +24,13 @@ public class PetControllerTest {
 	PetController underTest;
 	
 	@Mock
-	CrudRepository<Pet, Long> petRepo;
+	PetRepository petRepo;
 	
 	@Mock
 	Pet pet;
+	
+	@Mock
+	Model model;
 	
 	@Before
 	public void setup() {
@@ -48,5 +53,15 @@ public class PetControllerTest {
 		Iterable<Pet> result = underTest.getPets();
 		
 		assertThat(result, contains(pet));
+	}
+	
+	@Test
+	public void shouldAddPetsToModel() {
+		Set<Pet> singleton = Collections.singleton(pet);
+		when(petRepo.findAll()).thenReturn(singleton);
+		
+		underTest.addPetsToModel(model);
+		
+		verify(model).addAttribute("pets", singleton);
 	}
 }
