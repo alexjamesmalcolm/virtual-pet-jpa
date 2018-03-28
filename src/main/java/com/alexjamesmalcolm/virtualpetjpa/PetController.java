@@ -32,4 +32,8 @@ public class PetController {
 		shelter.oilRobots();
 	}
 
+	public void playWithPet(String name) {
+		shelter.play(name);
+	}
+
 }

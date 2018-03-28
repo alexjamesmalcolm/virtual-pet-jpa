@@ -85,4 +85,11 @@ public class PetControllerTest {
 		underTest.oilRoboticPets();
 		verify(shelter).oilRobots();
 	}
+	
+	@Test
+	public void shouldCallPlay() {
+		String name = "Joey";
+		underTest.playWithPet(name);
+		verify(shelter).play(name);
+	}
 }
