@@ -92,4 +92,10 @@ public class PetControllerTest {
 		underTest.playWithPet(name);
 		verify(shelter).play(name);
 	}
+	
+	@Test
+	public void shouldCallFeed() {
+		underTest.feedPets();
+		verify(shelter).feed();
+	}
 }

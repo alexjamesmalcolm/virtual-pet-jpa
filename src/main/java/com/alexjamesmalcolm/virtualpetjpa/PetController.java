@@ -36,4 +36,8 @@ public class PetController {
 		shelter.play(name);
 	}
 
+	public void feedPets() {
+		shelter.feed();
+	}
+
 }
