@@ -28,4 +28,8 @@ public class PetController {
 		shelter.walk();
 	}
 
+	public void oilRoboticPets() {
+		shelter.oilRobots();
+	}
+
 }

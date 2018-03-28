@@ -79,4 +79,10 @@ public class PetControllerTest {
 		underTest.walkPets();
 		verify(shelter).walk();
 	}
+	
+	@Test
+	public void shouldCallOilRobots() {
+		underTest.oilRoboticPets();
+		verify(shelter).oilRobots();
+	}
 }
