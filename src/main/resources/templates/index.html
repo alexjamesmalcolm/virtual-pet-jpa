@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<title>Virtual Pets</title>
+</head>
+<body>
+	<div class="container">
+		<div th:each="pet : ${pets}">
+			<p th:text="${pet.name}"/>
+		</div>
+	</div>
+</body>
+</html>
