@@ -8,36 +8,52 @@ public class PetShelter {
 
 	private Collection<Pet> pets = new ArrayList<>();
 
-	public void walk() {
-		pets.forEach(pet -> {
-			if (Walkable.class.isAssignableFrom(pet.getClass()))
-				((Walkable) pet).walk();
-		});
-	}
-
 	public void add(Pet pet) {
 		pets.add(pet);
 	}
 
+	private Iterable<Pet> getPets() {
+		return pets;
+	}
+
+	public void walk() {
+		pets.forEach(pet -> {
+			if (isWalkable(pet))
+				((Walkable) pet).walk();
+		});
+	}
+
+	private boolean isWalkable(Pet pet) {
+		return Walkable.class.isAssignableFrom(pet.getClass());
+	}
+
 	public void oilRobots() {
 		pets.forEach(pet -> {
-			if (Robotic.class.isAssignableFrom(pet.getClass())) {
+			if (isRobotic(pet)) {
 				Robotic robot = (Robotic) pet;
 				robot.oil();
 			}
 		});
 	}
 
+	private boolean isRobotic(Pet pet) {
+		return Robotic.class.isAssignableFrom(pet.getClass());
+	}
+
 	public void feed() {
 		pets.forEach(pet -> {
-			if (Organic.class.isAssignableFrom(pet.getClass()))
+			if (isOrganic(pet))
 				((Organic) pet).feed();
 		});
 	}
 
+	private boolean isOrganic(Pet pet) {
+		return Organic.class.isAssignableFrom(pet.getClass());
+	}
+
 	public void water() {
 		pets.forEach(pet -> {
-			if (Organic.class.isAssignableFrom(pet.getClass()))
+			if (isOrganic(pet))
 				((Organic) pet).water();
 		});
 	}
@@ -46,15 +62,10 @@ public class PetShelter {
 		List<Pet> pets = (List<Pet>) getPets();
 		for (int i = 0; i < pets.size(); i++) {
 			Pet pet = pets.get(i);
-			System.out.println(pet);
 			if (pet.getName().equals(name))
 				return pet;
 		}
 		return null;
-	}
-
-	private Iterable<Pet> getPets() {
-		return pets;
 	}
 
 	public void play(String name) {
