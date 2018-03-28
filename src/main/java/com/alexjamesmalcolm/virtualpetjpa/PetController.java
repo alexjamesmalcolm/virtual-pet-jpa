@@ -24,4 +24,8 @@ public class PetController {
 		shelter.water();
 	}
 
+	public void walkPets() {
+		shelter.walk();
+	}
+
 }

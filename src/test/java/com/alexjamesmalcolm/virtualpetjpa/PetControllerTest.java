@@ -73,4 +73,10 @@ public class PetControllerTest {
 		underTest.waterPets();
 		verify(shelter).water();
 	}
+	
+	@Test
+	public void shouldCallWalkOnShelter() {
+		underTest.walkPets();
+		verify(shelter).walk();
+	}
 }
