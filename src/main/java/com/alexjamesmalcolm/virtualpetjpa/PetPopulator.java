@@ -10,6 +10,7 @@ import org.springframework.stereotype.Component;
 @Component
 public class PetPopulator implements CommandLineRunner {
 	
+	@SuppressWarnings("unused")
 	private Logger log = LoggerFactory.getLogger(PetPopulator.class);
 
 	@Resource
