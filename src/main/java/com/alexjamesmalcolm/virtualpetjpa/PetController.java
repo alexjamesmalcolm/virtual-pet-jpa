@@ -8,6 +8,8 @@ import com.alexjamesmalcolm.virtualpetjpa.pet.Pet;
 public class PetController {
 	
 	private CrudRepository<Pet, Long> petRepo;
+	
+	private PetShelter shelter;
 
 	public Iterable<Pet> getPets() {
 		return petRepo.findAll();
@@ -16,6 +18,10 @@ public class PetController {
 	public void addPetsToModel(Model model) {
 		Iterable<Pet> pets = petRepo.findAll();
 		model.addAttribute("pets", pets);
+	}
+
+	public void waterPets() {
+		shelter.water();
 	}
 
 }

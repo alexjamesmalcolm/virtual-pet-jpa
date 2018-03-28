@@ -32,6 +32,9 @@ public class PetControllerTest {
 	@Mock
 	Model model;
 	
+	@Mock
+	PetShelter shelter;
+	
 	@Before
 	public void setup() {
 		MockitoAnnotations.initMocks(this);
@@ -63,5 +66,11 @@ public class PetControllerTest {
 		underTest.addPetsToModel(model);
 		
 		verify(model).addAttribute("pets", singleton);
+	}
+	
+	@Test
+	public void shouldCallWaterOnShelter() {
+		underTest.waterPets();
+		verify(shelter).water();
 	}
 }
